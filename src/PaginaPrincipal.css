@@ -1,0 +1,52 @@
+.pagina-principal-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .side-menu {
+    width: 25%;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .university-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-button {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: #6c63ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-button:hover {
+    background-color: #5144d9;
+  }
+  
+  .image-grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .image-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }

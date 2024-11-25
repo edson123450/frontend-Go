@@ -1,0 +1,103 @@
+/* Estilos generales */
+.uni-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+  }
+  
+/* Botón Atrás */
+.back-button {
+    padding: 10px 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+.back-button:hover {
+    background-color: #e6e6e6;
+  }
+  
+/* Rectángulo UNI GO */
+.uni-go {
+    background-color: #8B4513; /* Marrón */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+/* Sección principal */
+.login-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Para evitar que se superponga con el header */
+  }
+  
+/* Logotipo de UNI */
+.uni-logo {
+    width: 200px;
+    margin-right: 30px;
+  }
+  
+/* Caja de login */
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.login-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+.input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+.login-button {
+    width: 320px;
+    padding: 10px;
+    background-color: #8B4513; /* Marrón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+.login-button:hover {
+    background-color: #5A3310; /* Marrón más oscuro */
+  }
