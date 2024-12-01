@@ -1,0 +1,27 @@
+.lista-encuestas-container {
+    padding: 20px;
+  }
+  
+  .encuestas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .encuesta-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .encuesta-card h2 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .encuesta-card p {
+    font-size: 14px;
+    color: #666;
+  }

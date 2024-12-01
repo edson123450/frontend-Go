@@ -1,0 +1,103 @@
+.inscripciones-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Programas (sin cambios) */
+.programas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.programa-card {
+    border: 2px solid #ccc;
+    border-radius: 30px; /* Rectángulo circular */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.programa-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.programa-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.seleccionar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Botón "Ver mis descuentos" */
+.ver-descuentos-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Títulos de descuentos */
+.descuentos-titulos {
+    display: grid;
+    grid-template-columns: 3.5fr 1fr 1.5fr; /* Ajuste para alinear correctamente los títulos */
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    width: 50%; /* Ancho exacto igual que los rectángulos */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista de descuentos */
+.descuentos-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los descuentos */
+    gap: 10px;
+}
+
+/* Rectángulos circulares para descuentos */
+.descuento-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto; /* Alinear datos y botón */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    width: 50%; /* Más pequeño horizontalmente */
+    text-align: center;
+}
+
+/* Botón "Pagar" */
+.pagar-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pagar-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

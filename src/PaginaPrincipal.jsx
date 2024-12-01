@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import UTECLogo from "./images/UTECLogo.png";
 import UPCLogo from "./images/UPC.png";
 import UNILogo from "./images/UNILogo.png";
@@ -11,7 +11,9 @@ import "./PaginaPrincipal.css";
 
 function PaginaPrincipal() {
   const location = useLocation();
+  const navigate = useNavigate();
   const tenant_id = location.state?.tenant_id; // Obtener el tenant_id desde el estado
+  const c_estudiante = location.state?.c_estudiante; // Obtener el c_estudiante desde el estado
 
   let logo;
 
@@ -26,14 +28,39 @@ function PaginaPrincipal() {
     logo = null; // Manejo opcional si tenant_id no es válido
   }
 
+  // Manejar la navegación
+  const handleNavigateToPerfil = () => {
+    navigate("/perfil-estudiante", { state: { tenant_id, c_estudiante } });
+  };
+
+  const handleNavigateToInscripciones = () => {
+    navigate("/inscripciones-estudiante", { state: { tenant_id, c_estudiante } });
+  };
+
+  const handleNavigateToEncuestas = () => {
+    navigate("/encuestas-programas", { state: { tenant_id, c_estudiante } });
+  };
+
+  const handleNavigateToProgramas = () => {
+    navigate("/programas-universidad", { state: { tenant_id, c_estudiante } });
+  };
+
   return (
     <div className="pagina-principal-container">
       <div className="side-menu">
         {logo && <img src={logo} alt="University Logo" className="university-logo" />}
-        <button className="menu-button">Perfil Estudiante</button>
-        <button className="menu-button">Inscripciones</button>
-        <button className="menu-button">Programas Intercambio</button>
-        <button className="menu-button">Encuestas Programas</button>
+        <button className="menu-button" onClick={handleNavigateToPerfil}>
+          Perfil Estudiante
+        </button>
+        <button className="menu-button" onClick={handleNavigateToInscripciones}>
+          Inscripciones
+        </button>
+        <button className="menu-button" onClick={handleNavigateToProgramas}>
+          Programas Intercambio
+        </button>
+        <button className="menu-button" onClick={handleNavigateToEncuestas}>
+          Encuestas Programas
+        </button>
       </div>
       <div className="image-grid">
         <img src={imagen01} alt="Imagen 01" className="image-item" />

@@ -1,0 +1,55 @@
+.programas-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.programa-card {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Para posicionar el botón */
+}
+
+.programa-card h2 {
+  margin-top: 0;
+  font-size: 1.2em; /* Reducir el tamaño de la fuente */
+}
+
+.programa-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.programa-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.programa-column p {
+  margin: 5px 0;
+  font-size: 0.85em; /* Reducir el tamaño del texto */
+  color: #333;
+}
+
+.ver-mas-button {
+  position: absolute; /* Posicionar el botón en la parte superior derecha */
+  top: 48px; /* Ajustar la posición vertical */
+  right: 15px; /* Ajustar la posición horizontal */
+  padding: 8px 10px; /* Reducir el tamaño del botón */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8em; /* Reducir el tamaño del texto del botón */
+}
+
+.ver-mas-button:hover {
+  background-color: #0056b3;
+}

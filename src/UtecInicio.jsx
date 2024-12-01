@@ -3,6 +3,7 @@ import "./UtecInicio.css";
 import avionUtec from "./images/avionUtec.png";
 import { useNavigate } from "react-router-dom";
 import { login } from "./api";
+import { informacion_estudiante } from "./api";
 
 function UtecInicio() {
   const [email, setEmail] = useState("");
@@ -20,9 +21,17 @@ function UtecInicio() {
     // Intentar iniciar sesión usando la API
     try {
       const response = await login(email, password);
+      console.log(response.success);
       if (response.success) {
         // Redirigir a PaginaPrincipal.jsx con el tenant_id "UTEC"
-        navigate("/pagina-principal", { state: { tenant_id: "UTEC" } });
+        const c_estudiante= await informacion_estudiante(email);
+        console.log(c_estudiante);
+        if (!c_estudiante || c_estudiante.success === false) {
+            setError("Error obteniendo información del estudiante.");
+            return;
+        }
+        //console.log(response.success);
+        navigate("/pagina-principal", { state: { tenant_id: "UTEC", c_estudiante: c_estudiante } });
       } else {
         setError("Credenciales inválidas. Por favor, intente nuevamente.");
       }
