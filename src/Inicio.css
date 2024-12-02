@@ -1,31 +1,53 @@
 .inicio {
-    background-color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .boton {
-    width: 200px;
-    height: 50px;
-    margin: 10px 0;
-    border-radius: 25px;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .boton.utec {
-    background-color: blue;
-  }
-  
-  .boton.upc {
-    background-color: red;
-  }
-  
-  .boton.uni {
-    background-color: brown;
-  }
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.universidad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.universidad-imagen {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.boton {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton.utec {
+  background-color: #0056d2; /* Azul */
+}
+
+.boton.upc {
+  background-color: #d90000; /* Rojo */
+}
+
+.boton.uni {
+  background-color: #8b0000; /* Marrón */
+}

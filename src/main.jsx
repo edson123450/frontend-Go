@@ -13,15 +13,20 @@ import FaseDePago from "./FaseDePago";
 import EncuestasProgramas from "./EncuestasProgramas";
 import ListaEncuestas from "./ListaEncuestas";
 import CrearEncuesta from "./CrearEncuesta";
+import PerfilEstudiante from "./PerfilEstudiante";
+import UniversidadesInicio from "./UniversidadesInicio";
+/*
+        <Route path="/utec" element={<UTECInicio />} />
+        <Route path="/upc" element={<UPCInicio />} />
+        <Route path="/uni" element={<UNIInicio />} />
+*/
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/utec" element={<UTECInicio />} />
-        <Route path="/upc" element={<UPCInicio />} />
-        <Route path="/uni" element={<UNIInicio />} />
+        <Route path="/universidades-inicio" element={<UniversidadesInicio />} />
         <Route path="/pagina-principal" element={<PaginaPrincipal />} />
         <Route path="/programas-universidad" element={<ProgramasUniversidad/>} />
         <Route path="/programa-universidad-detalles" element={<ProgramaUniversidadDetalles />} />
@@ -30,6 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/encuestas-programas" element={<EncuestasProgramas/>} />
         <Route path="/listar-encuestas" element={<ListaEncuestas/>} />
         <Route path="/crear-encuesta" element={<CrearEncuesta/>} />
+        <Route path="/perfil-estudiante" element={<PerfilEstudiante/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

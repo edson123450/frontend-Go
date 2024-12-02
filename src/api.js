@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // URL de la API
-const BASE_URL = "https://njpsvj0t5h.execute-api.us-east-1.amazonaws.com/dev/registro/login";
+const BASE_URL = "https://6nhw9wc802.execute-api.us-east-1.amazonaws.com/dev/registro/login";
 
 // Función de login
 export const login = async (email, password) => {
@@ -42,7 +42,7 @@ export const informacion_estudiante=async(email)=>{
         }
         console.log("token obtenido:",token);
         const response=await axios.post(
-            'https://njpsvj0t5h.execute-api.us-east-1.amazonaws.com/dev/registro/estudiante/search',
+            'https://6nhw9wc802.execute-api.us-east-1.amazonaws.com/dev/registro/estudiante/search',
             {
                 email:email,
             },
@@ -78,7 +78,7 @@ export const obtener_programas_universidad= async (tenant_id)=>{
         console.log("Euh token:",token);
         console.log(tenant_id);
         const response= await axios.post(
-            'https://mdlm2aru29.execute-api.us-east-1.amazonaws.com/dev/programas/listar',
+            'https://ibrfkttxja.execute-api.us-east-1.amazonaws.com/dev/programas/listar',
             {
                 tenant_id:tenant_id,
             },
@@ -112,7 +112,7 @@ export const obtener_programa_universidad_especifico= async (tenant_id,c_program
         //console.log(tenant_id);
         //console.log(c_programa);
         const response= await axios.post(
-            'https://mdlm2aru29.execute-api.us-east-1.amazonaws.com/dev/programas/search',
+            'https://ibrfkttxja.execute-api.us-east-1.amazonaws.com/dev/programas/search',
             {
                 tenant_id:tenant_id,
                 c_programa:c_programa,
@@ -163,7 +163,7 @@ export const inscribirse_programa_estudiante = async (tenant_id, c_estudiante, c
   
       // Realizar la solicitud POST a la API
       const response = await axios.post(
-        'https://grxjbj8n0d.execute-api.us-east-1.amazonaws.com/dev/inscripciones/crear',
+        'https://2xf0f7dt09.execute-api.us-east-1.amazonaws.com/dev/inscripciones/crear',
         body,
         {
           headers: {
@@ -193,7 +193,7 @@ export const inscripciones_pendientes_estudiante=async(tenant_id,c_estudiante)=>
         }
         const tenant_id_c_estudiante = `${tenant_id}#${c_estudiante}`;
         const response=await axios.post(
-            'https://grxjbj8n0d.execute-api.us-east-1.amazonaws.com/dev/inscripciones/search',
+            'https://2xf0f7dt09.execute-api.us-east-1.amazonaws.com/dev/inscripciones/search',
             {
                 'tenant_id#c_estudiante': tenant_id_c_estudiante,
             },
@@ -228,7 +228,7 @@ export const descuentos_estudiante=async(tenant_id,c_estudiante)=>{
         }
         const tenant_id_c_estudiante = `${tenant_id}#${c_estudiante}`;
         const response= await axios.post(
-            'https://wnzziugc76.execute-api.us-east-1.amazonaws.com/dev/descuentos/listar',
+            'https://lba5i4cn18.execute-api.us-east-1.amazonaws.com/dev/descuentos/listar',
             {
                 'tenant_id#c_estudiante': tenant_id_c_estudiante,
             },
@@ -257,7 +257,7 @@ export const descontar_stock_descuento_estudiante=async(tenant_id,c_estudiante,c
         }
         const tenant_id_c_estudiante = `${tenant_id}#${c_estudiante}`;
         const response=await axios.put(
-            'https://wnzziugc76.execute-api.us-east-1.amazonaws.com/dev/descuentos/modificar',
+            'https://lba5i4cn18.execute-api.us-east-1.amazonaws.com/dev/descuentos/modificar',
             {
                 'tenant_id#c_estudiante':tenant_id_c_estudiante,
                 'c_descuento':c_descuento,
@@ -295,7 +295,7 @@ export const eliminar_descuento_estudiante = async (tenant_id, c_estudiante, c_d
         }
         const tenant_id_c_estudiante = `${tenant_id}#${c_estudiante}`;
         const response = await axios.delete(
-            'https://wnzziugc76.execute-api.us-east-1.amazonaws.com/dev/descuentos/eliminar',
+            'https://lba5i4cn18.execute-api.us-east-1.amazonaws.com/dev/descuentos/eliminar',
             {
                 headers: {
                     Authorization: token,
@@ -325,7 +325,7 @@ export const crear_boleta_estudiante=async(tenant_id,c_estudiante,c_programa,emp
             throw new Error("Token no encontrado. Inicia sesión para continuar");
         }
         const response= await axios.post(
-            'https://xakc1e7et0.execute-api.us-east-1.amazonaws.com/dev/boletas/crear',
+            'https://74bj00ga4c.execute-api.us-east-1.amazonaws.com/dev/boletas/crear',
             {
                 'tenant_id':tenant_id,
                 'c_estudiante':c_estudiante,
@@ -361,7 +361,7 @@ export const obtener_inscripcion_especifica=async(tenant_id,c_estudiante,c_progr
         }
 
         const response=await axios.post(
-            'https://grxjbj8n0d.execute-api.us-east-1.amazonaws.com/dev/inscripciones/specificsearch',
+            'https://2xf0f7dt09.execute-api.us-east-1.amazonaws.com/dev/inscripciones/specificsearch',
             {
                 'tenant_id':tenant_id,
                 'c_estudiante':c_estudiante,
@@ -396,7 +396,7 @@ export const cambiar_estado_inscripcion=async(tenant_id,c_estudiante,c_programa,
         }
 
         const response=await axios.put(
-            'https://grxjbj8n0d.execute-api.us-east-1.amazonaws.com/dev/inscripciones/changestate',
+            'https://2xf0f7dt09.execute-api.us-east-1.amazonaws.com/dev/inscripciones/changestate',
             {
                 'tenant_id':tenant_id,
                 'c_estudiante':c_estudiante,
@@ -434,7 +434,7 @@ export const listar_encuestas=async(tenant_id)=>{
         }
 
         const response=await axios.post(
-            'https://z1u1oulcrj.execute-api.us-east-1.amazonaws.com/dev/encuestas/listarencuestas',
+            'https://o5wbqbhba2.execute-api.us-east-1.amazonaws.com/dev/encuestas/listarencuestas',
             {
                 'tenant_id':tenant_id,
             },
@@ -465,7 +465,7 @@ export const obtener_alumno_por_codigo=async(tenant_id,c_estudiante)=>{
         }
 
         const response=await axios.post(
-            'https://njpsvj0t5h.execute-api.us-east-1.amazonaws.com/dev/registro/estudiante/searchbycode',
+            'https://6nhw9wc802.execute-api.us-east-1.amazonaws.com/dev/registro/estudiante/searchbycode',
             {
                 'tenant_id':tenant_id,
                 'c_estudiante':c_estudiante,
@@ -497,7 +497,7 @@ export const crear_encuesta=async(valor1,valor2,descripcion)=>{
         }
 
         const response=await axios.post(
-            'https://z1u1oulcrj.execute-api.us-east-1.amazonaws.com/dev/encuestas/crear',
+            'https://o5wbqbhba2.execute-api.us-east-1.amazonaws.com/dev/encuestas/crear',
             {
                 'tenant_id#c_programa':valor1,
                 'tipo#c_estudiante':valor2,
@@ -521,4 +521,4 @@ export const crear_encuesta=async(valor1,valor2,descripcion)=>{
         console.error("Error durante el API llamado crear_encuesta:", error.response?.data || error.message);
         return {success: false, error: error.response?.data || error.message};
     }
-}
+};
