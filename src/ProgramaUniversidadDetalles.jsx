@@ -40,6 +40,10 @@ function ProgramaUniversidadDetalles() {
     if (!programaDetalles) return;
 
     try {
+      console.log(tenant_id);
+      console.log(c_estudiante);
+      console.log(c_programa);
+      console.log(programaDetalles.monto);
       const response = await inscribirse_programa_estudiante(
         tenant_id,
         c_estudiante,

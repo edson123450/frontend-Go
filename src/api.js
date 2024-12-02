@@ -162,6 +162,9 @@ export const inscribirse_programa_estudiante = async (tenant_id, c_estudiante, c
       };
   
       // Realizar la solicitud POST a la API
+      console.log("hasta aqui estamos bien!");
+      console.log(token);
+      console.log(body);
       const response = await axios.post(
         'https://2xf0f7dt09.execute-api.us-east-1.amazonaws.com/dev/inscripciones/crear',
         body,
